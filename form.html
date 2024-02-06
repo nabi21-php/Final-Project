@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <!-- <header>
+    <img src="../IMG/clipart708931.png" alt="pup-logo" class="header-logo">
+    <p>Polytechnic University of the Philippines</p>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Form</a>
+    </nav>
+  </header> -->
+  <main>
+    <div class="form-header">
+        <img src="clipart708931.png" alt="LOGO">
+        <span>Republic of the Philippines <br>Polytechnic University of the Philippines <br> Office of the Vice President for Administration <br> <p>MEDICAL SERVICES DEPARTMENT</p></span>
+    </div>
+    
+    <form method="post"
+    action="https://script.google.com/macros/s/AKfycbxvDIoZuYYFCX6CrKLpxyBjSk9xgpzQoGOEDAn5GtZM5gwioLxTp-7GBThXfa5uJ6Q/exec" id="student-form">
+      <div class="information-container">
+        <h2>Student Information</h2>
+        <div class="first-row">
+          <label for="Student-ID">Student ID</label>
+          <label for="Full Name">Full Name</label>
+          <label for="Email">Email</label>
+          <label for="School Year">School Year</label>
+          <input type="text" id="Student-ID" name="Student-ID" pattern="\d{4}-\d{5}-[a-zA-Z]{2}-\d" 
+          title="Please enter a valid student number in the format YYYY-NNNNN-LL-N" placeholder="YYYY-NNNNN-LL-N" required>
+          <input type="text" id="Full Name" name="Full Name" pattern="^[A-Za-z]+(?: [A-Za-z]+\.)? [A-Za-z]+(?: [A-Za-z]+\.)?(?: [A-Za-z]+)?$" 
+          title="Please enter a valid name in the format First Name Middle Initial Last Name" placeholder="FN MI LN" required>
+          <input type="text" id="Email" name="Email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" 
+          title="Please enter a valid email address" placeholder="@gmail.com" required>
+          <input type="text" id="School Year" name="School Year" pattern="\d{4}-\d{4}" 
+          title="Please enter a valid school year in the format YYYY-YYYY" placeholder="YYYY-YYYY" required>
+        </div>
+
+        <div class="second-row">
+          <label for="">Gender</label>
+          <label for="date-of-birth">Date of Birth</label>
+          <label for="college">College Course</label>
+
+          <div class="gender">
+            <input type="radio" id="gender-male" name="gender" value="Male">
+            <label for="gender-male">Male</label>
+            <input type="radio" id="gender-female" name="gender" value="Female">
+            <label for="gender-female">Female</label>
+          </div>
+          <input type="date" id="date-of-birth" name="date-of-birth">
+          <select id="College Course" name="College Course" required>
+            <option></option>
+            <option value="BSIT">Bachelor of Science in Information Technology</option>
+            <option value="BSCS">Bachelor of Science in Computer Science</option>
+            </select>
+        </div>
+
+        <div class="third-row">
+          <label for="Year & Section">Year & Section</label>
+          <label for="Phone/Mobile No.">Phone/Mobile No.</label>
+          <label for="Civil Status">Civil Status</label>
+          <input type="text" id="Year & Section" name="Year & Section" placeholder="Ex. 3-5" required>
+          <input type="text" id="Phone/Mobile No." name="Phone/Mobile No." placeholder="09659796313" required>
+          <select id="Civil Status" name="Civil Status" required>
+            <option></option>
+            <option value="Single">Single</option>
+            <option value="Married">Married</option>
+            <option value="Widowed">Widowed</option>
+            <option value="Divorced">Divorced</option>
+            </select>
+        </div>
+    
+        <div class="fourth-row">
+          <label for="address">Address</label>
+          <input type="text" id="address" name="address" required>
+        </div>
+      </div>
+
+      <!-- check box -->
+      <br>
+      <h2> Please check the following and give more information as needed for your medical attention</h2>
+      <section class="student-health-container">
+
+        <div class="Asthma">
+          <input type="checkbox" id="Asthma" name="health-concern" value="Asthma"/>
+          <label for="Asthma">Asthma</label>
+        </div>
+
+        <div class="Diabetes">
+          <input type="checkbox" id="Diabetes" name="health-concern" value="Diabetes" />
+          <label for="Diabetes">Diabetes</label>
+        </div>
+
+        <div class="Epilepsy">
+          <input type="checkbox" id="Epilepsy" name="health-concern" value="Epilepsy" />
+          <label for="Epilepsy">Epilepsy</label>
+        </div>
+
+        <div class="Migraine">
+          <input type="checkbox" id="Migraine" name="health-concern" value="Migraine" />
+          <label for="Migraine">Migraine</label>
+        </div>
+
+        <div class="Heart Disease">
+            <input type="checkbox" id="Heart Disease" name="health-concern" value="Heart Disease"/>
+            <label for="Heart Disease">Heart Disease</label>
+          </div>
+  
+          <div class="Hemophilia">
+            <input type="checkbox" id="Hemophilia" name="health-concern" value="Hemophilia" />
+            <label for="Hemophilia">Hemophilia</label>
+          </div>
+  
+          <div class="Accident Injuries">
+            <input type="checkbox" id="Accident Injuries" name="health-concern" value="Accident Injuries" />
+            <label for="Accident Injuries">Accident Injuries</label>
+          </div>
+
+        <div class="Others">
+          <input type="checkbox" id="Others" name="health-concern" value="Others" />
+          <label for="Others">Others</label>
+          <input type="text" id="Others" name="Others">
+        </div>
+
+      </section>
+
+      <br>
+      <h2>Additional Information for Students with Medical Concern:</h2>
+      <section class="student-health-container">
+
+        <div class="Food">
+            <input type="checkbox" id="Food" name="allergy" value="Food"/>
+            <label for="Food">Food</label>
+          </div>
+  
+          <div class="Medicine">
+            <input type="checkbox" id="Medicine" name="allergy" value="Medicine" />
+            <label for="Medicine">Medicine</label>
+          </div>
+  
+          <div class="Object">
+            <input type="checkbox" id="Object" name="allergy" value="Object" />
+            <label for="Object">Object</label>
+          </div>
+
+          <div class="Specify-Concern/s">
+            <label for="Specify-Concern/s">Specify-Concern/s:</label>
+            <input type="text" id="Specify-Concern/s" name="Specify-Concern/s">
+          </div>
+  
+      </section>
+
+
+      <div class="emergency-section">
+        <div class="emergency-first-row">
+          <p>In case of emergency, please notify:</p>
+        </div>
+        
+        <div class="emergency-second-row">
+          <label for="Parent/Guardian Name">Parent/Guardian Name:</label>
+          <label for="emergency-phone">Phone/Mobile No.</label>
+          <input type="text" id="Parent/Guardian Name" name="Parent/Guardian Name" pattern="^[A-Za-z]+(?: [A-Za-z]+\.)? [A-Za-z]+(?: [A-Za-z]+\.)?(?: [A-Za-z]+)?$" 
+          title="Please enter a valid name in the format First Name Middle Initial Last Name" placeholder="FN MI LN" required>
+          <input type="text" id="emergency-phone" name="emergency-phone" placeholder="09659796313" required>
+        </div>
+        
+        <div class="emergency-third-row">
+          <label for="emergency-address">Complete Address:</label>
+          <input type="text" id="emergency-address" name="emergency-address">
+        </div>
+      </div>      
+      <input type="submit" id="form-submit">
+      <img src="images/loader.svg" id="loader" style="display: none;" />
+    </form>
+  </main>
+  <!-- <footer>
+    <div></div>
+  </footer> -->
+
+  <script src="scripts/jquery.min.js"></script>
+  <script src="index.js"></script>  
+</body>
+</html>
